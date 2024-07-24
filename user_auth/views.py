@@ -42,7 +42,7 @@ def register(request):
     return render(request, "user_auth/register.html")
 
 
-def verify_otp(request, user_id):
+def verify_otp_view(request, user_id):
     user = CustomUser.objects.get(id=user_id)
 
     if request.method == "POST":
